@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageViewNum"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_alphabet" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center">
+
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/txtNameNum"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="24dp" />
+        </TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/labelLookNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Похожий жест: "
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+            <TextView
+                android:id="@+id/txtLookNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="указательный палец"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/labelLookNum"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/labelCommentNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Комментарий: "
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewNum"
+                app:layout_constraintTop_toBottomOf="@+id/labelLookNum"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/txtCommentNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="указательный палец поднят вверх"
+                app:layout_constraintStart_toEndOf="@+id/labelCommentNum"
+                app:layout_constraintTop_toBottomOf="@+id/txtLookNum" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelYearOsnovNum"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Основан: "
+                android:textSize="19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelCommentNum" />
+
+            <TextView
+                android:id="@+id/txtYearOsnovNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="2022"
+                app:layout_constraintStart_toEndOf="@+id/labelYearOsnovNum"
+                app:layout_constraintTop_toBottomOf="@+id/txtComment" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

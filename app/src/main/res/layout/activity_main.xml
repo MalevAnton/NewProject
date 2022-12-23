@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#2196F3"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="120dp"
+            android:layout_height="140dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logotip" />
+
+        <LinearLayout
+            android:layout_width="205dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtDeaf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Обучение РЖЯ"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="10dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:backgroundTint="#3F51B5"
+                android:onClick="goLogin"
+                android:text="Вход" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNumber"
+        android:layout_width="395dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="goNumber"
+        android:text="Числа"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlphabet"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btnAcqua"
+        android:layout_width="395dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="11dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="goAcquaintance"
+        android:text="Знакомство"
+        app:layout_constraintTop_toBottomOf="@+id/imageInfo2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btnAlphabet"
+        android:layout_width="395dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="goAlphabet"
+        android:text="Алфавит (Дактиль)"
+        app:layout_constraintTop_toBottomOf="@+id/imageInfo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <ImageView
+        android:id="@+id/imageInfo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnDactyl2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@android:drawable/ic_menu_info_details"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageInfo2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnDactyl2"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber"
+        app:srcCompat="@android:drawable/ic_menu_info_details"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnDactyl2"
+        android:layout_width="330dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="goDactyl"
+        android:text="Дактиль"
+        app:layout_constraintStart_toEndOf="@+id/imageInfo"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnLeksika"
+        android:layout_width="330dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="goLeksika"
+        android:text="Лексика"
+        app:layout_constraintStart_toEndOf="@+id/imageInfo"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

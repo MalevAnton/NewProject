@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LecksikaActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#2196F3"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_alphabet"/>
+
+        <LinearLayout
+            android:layout_width="205dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtDeaf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Обучение РЖЯ"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="10dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:backgroundTint="#3F51B5"
+                android:onClick="goLogin"
+                android:text="Вход" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtLeksika"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="145dp"
+        android:text="Лексика"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtOpis"
+        android:layout_width="375dp"
+        android:layout_height="519dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="17dp"
+        android:text="      Многие жесты, используемые в русском жестовом языке, были заимствованы из французского, немецкого и австрийского жестовых языков, благодаря чему его лексика близка международной.\n\n
+        С другой стороны в русский жестовый язык взято много слов из русского языка или трансформировавшихся под его влиянием. К примеру, жесты дней недели основаны на дактилировании первых букв, с которых начинаются эти слова в русском языке.\n\n
+
+        Жесты часто изображают объекты и явления окружающего мира, к примеру, такие далёкие в звуковом языке понятия, как «игра на пианино» и «компьютер», в русском жестовом языке выражаются одним жестом, имитирующим работу с клавишами."
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLeksika"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="48dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="78dp"
+        android:onClick="goBack"
+        app:layout_constraintEnd_toStartOf="@+id/txtLeksika"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
